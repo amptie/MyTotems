@@ -1,0 +1,9 @@
+## Interface: 11200
+## Title: MyTotems
+## Notes: Managing Totems on twow, use /tt lock/unlock and show/hide to handle TotemTimers
+## Author: Celebrindal | Ennea
+## Version: 2.0
+## SavedVariables: SavedTotemSetup
+
+MyTotems.lua
+TotemTimers.lua
