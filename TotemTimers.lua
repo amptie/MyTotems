@@ -206,89 +206,110 @@ ttairbutton:SetScript('OnEvent', function()
 		ttairicon:SetTexture('Interface\\Icons\\Spell_Nature_Windfury')
 		ttairtotemplacementtime = GetTime()
 		ttairtotemtime = 120
+		ttairbuttontext:SetTextColor(1.0, 1.0, 1.0)
 	elseif arg1 == 'You cast Grace of Air Totem.' then
 		ttairicon:SetTexture('Interface\\Icons\\Spell_Nature_InvisibilityTotem')
 		ttairtotemplacementtime = GetTime()
 		ttairtotemtime = 120
+		ttairbuttontext:SetTextColor(1.0, 1.0, 1.0)
 	elseif arg1 == 'You cast Tranquil Air Totem.' then
 		ttairicon:SetTexture('Interface\\Icons\\Spell_Nature_Brilliance')
 		ttairtotemplacementtime = GetTime()
 		ttairtotemtime = 120
+		ttairbuttontext:SetTextColor(1.0, 1.0, 1.0)
 	elseif arg1 == 'You cast Nature Resistance Totem.' then
 		ttairicon:SetTexture('Interface\\Icons\\Spell_Nature_NatureResistanceTotem')
 		ttairtotemplacementtime = GetTime()
 		ttairtotemtime = 120
+		ttairbuttontext:SetTextColor(1.0, 1.0, 1.0)
 	elseif arg1 == 'You cast Grounding Totem.' then
 		ttairicon:SetTexture('Interface\\Icons\\Spell_Nature_GroundingTotem')
 		ttairtotemplacementtime = GetTime()
 		ttairtotemtime = 45
+		ttairbuttontext:SetTextColor(1.0, 1.0, 1.0)
 	elseif arg1 == 'You cast Windwall Totem.' then
 		ttairicon:SetTexture('Interface\\Icons\\Spell_Nature_EarthBind')
 		ttairtotemplacementtime = GetTime()
 		ttairtotemtime = 120
--------------------- EARTH TOTEMS ----------------------------------------	
+		ttairbuttontext:SetTextColor(1.0, 1.0, 1.0)
+-------------------- EARTH TOTEMS ----------------------------------------
 	elseif arg1 == 'You cast Strength of Earth Totem.' then
 		ttearthicon:SetTexture('Interface\\Icons\\Spell_Nature_EarthBindTotem')
 		ttearthtotemplacementtime = GetTime()
 		ttearthtotemtime = 120
+		ttearthbuttontext:SetTextColor(1.0, 1.0, 1.0)
 	elseif arg1 == 'You cast Tremor Totem.' then
 		ttearthicon:SetTexture('Interface\\Icons\\Spell_Nature_TremorTotem')
 		ttearthtotemplacementtime = GetTime()
 		ttearthtotemtime = 120
+		ttearthbuttontext:SetTextColor(1.0, 1.0, 1.0)
 	elseif arg1 == 'You cast Earthbind Totem.' then
 		ttearthicon:SetTexture('Interface\\Icons\\Spell_Nature_StrengthOfEarthTotem02')
 		ttearthtotemplacementtime = GetTime()
 		ttearthtotemtime = 45
+		ttearthbuttontext:SetTextColor(1.0, 1.0, 1.0)
 	elseif arg1 == 'You cast Stoneskin Totem.' then
 		ttearthicon:SetTexture('Interface\\Icons\\Spell_Nature_EarthBindTotem')
 		ttearthtotemplacementtime = GetTime()
 		ttearthtotemtime = 120
+		ttearthbuttontext:SetTextColor(1.0, 1.0, 1.0)
 	elseif arg1 == 'You cast Stoneclaw Totem.' then
 		ttearthicon:SetTexture('Interface\\Icons\\Spell_Nature_StoneClawTotem')
 		ttearthtotemplacementtime = GetTime()
 		ttearthtotemtime = 15
+		ttearthbuttontext:SetTextColor(1.0, 1.0, 1.0)
 -------------------- WATER TOTEMS ----------------------------------------
 	elseif arg1 == 'You cast Mana Spring Totem.' then
 		ttwatericon:SetTexture('Interface\\Icons\\Spell_Nature_ManaRegenTotem')
 		ttwatertotemplacementtime = GetTime()
 		ttwatertotemtime = 60
+		ttwaterbuttontext:SetTextColor(1.0, 1.0, 1.0)
 	elseif arg1 == 'You cast Fire Resistance Totem.' then
 		ttwatericon:SetTexture('Interface\\Icons\\Spell_FireResistanceTotem_01')
 		ttwatertotemplacementtime = GetTime()
 		ttwatertotemtime = 120
+		ttwaterbuttontext:SetTextColor(1.0, 1.0, 1.0)
 	elseif arg1 == 'You cast Poison Cleansing Totem.' then
 		ttwatericon:SetTexture('Interface\\Icons\\Spell_Nature_PoisonCleansingTotem')
 		ttwatertotemplacementtime = GetTime()
 		ttwatertotemtime = 120
+		ttwaterbuttontext:SetTextColor(1.0, 1.0, 1.0)
 	elseif arg1 == 'You cast Disease Cleansing Totem.' then
 		ttwatericon:SetTexture('Interface\\Icons\\Spell_Nature_DiseaseCleansingTotem')
 		ttwatertotemplacementtime = GetTime()
 		ttwatertotemtime = 120
+		ttwaterbuttontext:SetTextColor(1.0, 1.0, 1.0)
 	elseif arg1 == 'You cast Healing Stream Totem.' then
 		ttwatericon:SetTexture('Interface\\Icons\\INV_Spear_04')
 		ttwatertotemplacementtime = GetTime()
 		ttwatertotemtime = 60
+		ttwaterbuttontext:SetTextColor(1.0, 1.0, 1.0)
 -------------------- FIRE TOTEMS ----------------------------------------
 	elseif arg1 == 'You cast Flametongue Totem.' then
 		ttfireicon:SetTexture('Interface\\Icons\\Spell_Nature_GuardianWard')
 		ttfiretotemplacementtime = GetTime()
 		ttfiretotemtime = 120
+		ttfirebuttontext:SetTextColor(1.0, 1.0, 1.0)
 	elseif arg1 == 'You cast Frost Resistance Totem.' then
 		ttfireicon:SetTexture('Interface\\Icons\\Spell_FrostResistanceTotem_01')
 		ttfiretotemplacementtime = GetTime()
 		ttfiretotemtime = 120
+		ttfirebuttontext:SetTextColor(1.0, 1.0, 1.0)
 	elseif arg1 == 'You cast Magma Totem.' then
 		ttfireicon:SetTexture('Interface\\Icons\\Spell_Fire_SelfDestruct')
 		ttfiretotemplacementtime = GetTime()
 		ttfiretotemtime = 20
+		ttfirebuttontext:SetTextColor(1.0, 1.0, 1.0)
 	elseif arg1 == 'You cast Searing Totem.' then
 		ttfireicon:SetTexture('Interface\\Icons\\Spell_Fire_SearingTotem')
 		ttfiretotemplacementtime = GetTime()
 		ttfiretotemtime = 55
+		ttfirebuttontext:SetTextColor(1.0, 1.0, 1.0)
 	elseif arg1 == 'Windfury Totem ('.. ttplayername .. ') was destroyed.' then
 		ttairicon:SetTexture('Interface\\Icons\\Spell_Totem_WardOfDraining')
 		ttairbuttontext:SetText('')
 		ttairtotemtime = 0
+		ttfirebuttontext:SetTextColor(1.0, 1.0, 1.0)
 	end
 end)
 
