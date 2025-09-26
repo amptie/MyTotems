@@ -6,6 +6,10 @@ Using /mytotems opens a Window to choose the totems you want to place
 
 Using /mytotemscast will place those totems
 
+Using /tt lock/unlock will make TotemTimers movable or fixed
+
+Using /tt show/hode will make TotemTimers visible or hidden
+
 If you are using nampower, you can place all totems with one button press.
 
 Otherwise you have to press the button up to 4 times, depending on how many different totems you selected.
