@@ -72,8 +72,7 @@ ttairicon:SetPoint('BOTTOMRIGHT', ttairbutton, 'BOTTOMRIGHT', -4, 4)
 ttairbuttontext:SetPoint('BOTTOM', ttairbutton, 'CENTER', 0, -5)
 ttairbuttontext:SetFont("Fonts\\FRIZQT__.TTF", 12)
 
-ttairicon:SetTexture(nil)
-ttairbutton:Hide()
+ttairicon:SetTexture('Interface\\Icons\\Spell_Totem_WardOfDraining')
 
 --------------------------------------------------------------------------------
 
@@ -107,8 +106,7 @@ ttearthicon:SetPoint('BOTTOMRIGHT', ttearthbutton, 'BOTTOMRIGHT', -4, 4)
 ttearthbuttontext:SetPoint('BOTTOM', ttearthbutton, 'CENTER', 0, -5)
 ttearthbuttontext:SetFont("Fonts\\FRIZQT__.TTF", 12)
 
-ttearthicon:SetTexture(nil)
-ttearthbutton:Hide()
+ttearthicon:SetTexture('Interface\\Icons\\Spell_Totem_WardOfDraining')
 
 
 --------------------------------------------------------------------------------
@@ -143,8 +141,7 @@ ttwatericon:SetPoint('BOTTOMRIGHT', ttwaterbutton, 'BOTTOMRIGHT', -4, 4)
 ttwaterbuttontext:SetPoint('BOTTOM', ttwaterbutton, 'CENTER', 0, -5)
 ttwaterbuttontext:SetFont("Fonts\\FRIZQT__.TTF", 12)
 
-ttwatericon:SetTexture(nil)
-ttwaterbutton:Hide()
+ttwatericon:SetTexture('Interface\\Icons\\Spell_Totem_WardOfDraining')
 
 --------------------------------------------------------------------------------
 
@@ -178,12 +175,9 @@ ttfireicon:SetPoint('BOTTOMRIGHT', ttfirebutton, 'BOTTOMRIGHT', -4, 4)
 ttfirebuttontext:SetPoint('BOTTOM', ttfirebutton, 'CENTER', 0, -5)
 ttfirebuttontext:SetFont("Fonts\\FRIZQT__.TTF", 12)
 
-ttfireicon:SetTexture(nil)
-ttfirebutton:Hide()
+ttfireicon:SetTexture('Interface\\Icons\\Spell_Totem_WardOfDraining')
 
 --------------------------------------------------------------------------------
-
-wftotemactivestatus = false
 
 ttairbutton:RegisterEvent('CHAT_MSG_SPELL_SELF_BUFF')
 
@@ -191,24 +185,19 @@ ttairbutton:SetScript('OnEvent', function()
 	local ttplayername = UnitName("player")
 
 	if string.find(arg1, 'from Totemic Recall') then
-		ttairicon:SetTexture(nil)
-		ttairbutton:Hide()
+		ttairicon:SetTexture('Interface\\Icons\\Spell_Totem_WardOfDraining')
 		ttairbuttontext:SetText('')
 		ttairtotemtime = 0
 		ttairborder:SetBackdropColor(0, 0, 0, 0.75)
-		wftotemactivestatus = false
-		ttearthicon:SetTexture(nil)
-		ttearthbutton:Hide()
+		ttearthicon:SetTexture('Interface\\Icons\\Spell_Totem_WardOfDraining')
 		ttearthbuttontext:SetText('')
 		ttearthtotemtime = 0
 		ttearthborder:SetBackdropColor(0, 0, 0, 0.75)
-		ttwatericon:SetTexture(nil)
-		ttwaterbutton:Hide()
+		ttwatericon:SetTexture('Interface\\Icons\\Spell_Totem_WardOfDraining')
 		ttwaterbuttontext:SetText('')
 		ttwatertotemtime = 0
 		ttwaterborder:SetBackdropColor(0, 0, 0, 0.75)
-		ttfireicon:SetTexture(nil)
-		ttfirebutton:Hide()
+		ttfireicon:SetTexture('Interface\\Icons\\Spell_Totem_WardOfDraining')
 		ttfirebuttontext:SetText('')
 		ttfiretotemtime = 0
 		ttfireborder:SetBackdropColor(0, 0, 0, 0.75)
@@ -218,131 +207,109 @@ ttairbutton:SetScript('OnEvent', function()
 		ttairtotemplacementtime = GetTime()
 		ttairtotemtime = 120
 		ttairbuttontext:SetTextColor(1.0, 1.0, 1.0)
-		wftotemactivestatus = true
-		ttairbutton:Show()
 	elseif arg1 == 'You cast Grace of Air Totem.' then
 		ttairicon:SetTexture('Interface\\Icons\\Spell_Nature_InvisibilityTotem')
 		ttairtotemplacementtime = GetTime()
 		ttairtotemtime = 120
 		ttairbuttontext:SetTextColor(1.0, 1.0, 1.0)
-		ttairbutton:Show()
 	elseif arg1 == 'You cast Tranquil Air Totem.' then
 		ttairicon:SetTexture('Interface\\Icons\\Spell_Nature_Brilliance')
 		ttairtotemplacementtime = GetTime()
 		ttairtotemtime = 120
 		ttairbuttontext:SetTextColor(1.0, 1.0, 1.0)
-		ttairbutton:Show()
 	elseif arg1 == 'You cast Nature Resistance Totem.' then
 		ttairicon:SetTexture('Interface\\Icons\\Spell_Nature_NatureResistanceTotem')
 		ttairtotemplacementtime = GetTime()
 		ttairtotemtime = 120
 		ttairbuttontext:SetTextColor(1.0, 1.0, 1.0)
-		ttairbutton:Show()
 	elseif arg1 == 'You cast Grounding Totem.' then
 		ttairicon:SetTexture('Interface\\Icons\\Spell_Nature_GroundingTotem')
 		ttairtotemplacementtime = GetTime()
 		ttairtotemtime = 45
 		ttairbuttontext:SetTextColor(1.0, 1.0, 1.0)
-		ttairbutton:Show()
 	elseif arg1 == 'You cast Windwall Totem.' then
 		ttairicon:SetTexture('Interface\\Icons\\Spell_Nature_EarthBind')
 		ttairtotemplacementtime = GetTime()
 		ttairtotemtime = 120
 		ttairbuttontext:SetTextColor(1.0, 1.0, 1.0)
-		ttairbutton:Show()
 -------------------- EARTH TOTEMS ----------------------------------------
 	elseif arg1 == 'You cast Strength of Earth Totem.' then
 		ttearthicon:SetTexture('Interface\\Icons\\Spell_Nature_EarthBindTotem')
 		ttearthtotemplacementtime = GetTime()
 		ttearthtotemtime = 120
 		ttearthbuttontext:SetTextColor(1.0, 1.0, 1.0)
-		ttearthbutton:Show()
 	elseif arg1 == 'You cast Tremor Totem.' then
 		ttearthicon:SetTexture('Interface\\Icons\\Spell_Nature_TremorTotem')
 		ttearthtotemplacementtime = GetTime()
 		ttearthtotemtime = 120
 		ttearthbuttontext:SetTextColor(1.0, 1.0, 1.0)
-		ttearthbutton:Show()
 	elseif arg1 == 'You cast Earthbind Totem.' then
 		ttearthicon:SetTexture('Interface\\Icons\\Spell_Nature_StrengthOfEarthTotem02')
 		ttearthtotemplacementtime = GetTime()
 		ttearthtotemtime = 45
 		ttearthbuttontext:SetTextColor(1.0, 1.0, 1.0)
-		ttearthbutton:Show()
 	elseif arg1 == 'You cast Stoneskin Totem.' then
 		ttearthicon:SetTexture('Interface\\Icons\\Spell_Nature_EarthBindTotem')
 		ttearthtotemplacementtime = GetTime()
 		ttearthtotemtime = 120
 		ttearthbuttontext:SetTextColor(1.0, 1.0, 1.0)
-		ttearthbutton:Show()
 	elseif arg1 == 'You cast Stoneclaw Totem.' then
 		ttearthicon:SetTexture('Interface\\Icons\\Spell_Nature_StoneClawTotem')
 		ttearthtotemplacementtime = GetTime()
 		ttearthtotemtime = 15
 		ttearthbuttontext:SetTextColor(1.0, 1.0, 1.0)
-		ttearthbutton:Show()
 -------------------- WATER TOTEMS ----------------------------------------
 	elseif arg1 == 'You cast Mana Spring Totem.' then
 		ttwatericon:SetTexture('Interface\\Icons\\Spell_Nature_ManaRegenTotem')
 		ttwatertotemplacementtime = GetTime()
 		ttwatertotemtime = 60
 		ttwaterbuttontext:SetTextColor(1.0, 1.0, 1.0)
-		ttwaterbutton:Show()
 	elseif arg1 == 'You cast Fire Resistance Totem.' then
 		ttwatericon:SetTexture('Interface\\Icons\\Spell_FireResistanceTotem_01')
 		ttwatertotemplacementtime = GetTime()
 		ttwatertotemtime = 120
 		ttwaterbuttontext:SetTextColor(1.0, 1.0, 1.0)
-		ttwaterbutton:Show()
 	elseif arg1 == 'You cast Poison Cleansing Totem.' then
 		ttwatericon:SetTexture('Interface\\Icons\\Spell_Nature_PoisonCleansingTotem')
 		ttwatertotemplacementtime = GetTime()
 		ttwatertotemtime = 120
 		ttwaterbuttontext:SetTextColor(1.0, 1.0, 1.0)
-		ttwaterbutton:Show()
 	elseif arg1 == 'You cast Disease Cleansing Totem.' then
 		ttwatericon:SetTexture('Interface\\Icons\\Spell_Nature_DiseaseCleansingTotem')
 		ttwatertotemplacementtime = GetTime()
 		ttwatertotemtime = 120
 		ttwaterbuttontext:SetTextColor(1.0, 1.0, 1.0)
-		ttwaterbutton:Show()
 	elseif arg1 == 'You cast Healing Stream Totem.' then
 		ttwatericon:SetTexture('Interface\\Icons\\INV_Spear_04')
 		ttwatertotemplacementtime = GetTime()
 		ttwatertotemtime = 60
 		ttwaterbuttontext:SetTextColor(1.0, 1.0, 1.0)
-		ttwaterbutton:Show()
 -------------------- FIRE TOTEMS ----------------------------------------
 	elseif arg1 == 'You cast Flametongue Totem.' then
 		ttfireicon:SetTexture('Interface\\Icons\\Spell_Nature_GuardianWard')
 		ttfiretotemplacementtime = GetTime()
 		ttfiretotemtime = 120
 		ttfirebuttontext:SetTextColor(1.0, 1.0, 1.0)
-		ttfirebutton:Show()
 	elseif arg1 == 'You cast Frost Resistance Totem.' then
 		ttfireicon:SetTexture('Interface\\Icons\\Spell_FrostResistanceTotem_01')
 		ttfiretotemplacementtime = GetTime()
 		ttfiretotemtime = 120
 		ttfirebuttontext:SetTextColor(1.0, 1.0, 1.0)
-		ttfirebutton:Show()
 	elseif arg1 == 'You cast Magma Totem.' then
 		ttfireicon:SetTexture('Interface\\Icons\\Spell_Fire_SelfDestruct')
 		ttfiretotemplacementtime = GetTime()
 		ttfiretotemtime = 20
 		ttfirebuttontext:SetTextColor(1.0, 1.0, 1.0)
-		ttfirebutton:Show()
 	elseif arg1 == 'You cast Searing Totem.' then
 		ttfireicon:SetTexture('Interface\\Icons\\Spell_Fire_SearingTotem')
 		ttfiretotemplacementtime = GetTime()
 		ttfiretotemtime = 55
 		ttfirebuttontext:SetTextColor(1.0, 1.0, 1.0)
-		ttfirebutton:Show()
 	elseif arg1 == 'Windfury Totem ('.. ttplayername .. ') was destroyed.' then
 		ttairicon:SetTexture('Interface\\Icons\\Spell_Totem_WardOfDraining')
 		ttairbuttontext:SetText('')
 		ttairtotemtime = 0
 		ttfirebuttontext:SetTextColor(1.0, 1.0, 1.0)
-		ttfirebutton:Show()
 	end
 end)
 
@@ -356,11 +323,9 @@ ttairbutton:SetScript('OnUpdate', function(self, elapsed)
 			if airtimeLeft <= 0 then
 				ttairtotemtime = 0
 				ttairbuttontext:SetText('')
-				ttairicon:SetTexture(nil)
+				ttairicon:SetTexture('Interface\\Icons\\Spell_Totem_WardOfDraining')
 				ttairborder:SetBackdropColor(0, 0, 0, 0.75)
 				ttairbuttontext:SetTextColor(1.0, 1.0, 1.0)
-				wftotemactivestatus = false
-				ttairbutton:Hide()
 			elseif airtimeLeft < 10 then
 				ttairbuttontext:SetTextColor(1.0, 0.0, 0.0)
 			end
@@ -377,10 +342,9 @@ ttearthbutton:SetScript('OnUpdate', function(self, elapsed)
 			if earthtimeLeft <= 0 then
 				ttearthtotemtime = 0
 				ttearthbuttontext:SetText('')
-				ttearthicon:SetTexture(nil)
+				ttearthicon:SetTexture('Interface\\Icons\\Spell_Totem_WardOfDraining')
 				ttearthborder:SetBackdropColor(0, 0, 0, 0.75)
 				ttearthbuttontext:SetTextColor(1.0, 1.0, 1.0)
-				ttearthbutton:Hide()
 			elseif earthtimeLeft < 10 then
 				ttearthbuttontext:SetTextColor(1.0, 0.0, 0.0)
 			end
@@ -397,10 +361,9 @@ ttwaterbutton:SetScript('OnUpdate', function(self, elapsed)
 			if watertimeLeft <= 0 then
 				ttwatertotemtime = 0
 				ttwaterbuttontext:SetText('')
-				ttwatericon:SetTexture(nil)
+				ttwatericon:SetTexture('Interface\\Icons\\Spell_Totem_WardOfDraining')
 				ttwaterborder:SetBackdropColor(0, 0, 0, 0.75)
 				ttwaterbuttontext:SetTextColor(1.0, 1.0, 1.0)
-				ttwaterbutton:Hide()
 			elseif watertimeLeft < 10 then
 				ttwaterbuttontext:SetTextColor(1.0, 0.0, 0.0)
 			end
@@ -417,79 +380,14 @@ ttfirebutton:SetScript('OnUpdate', function(self, elapsed)
 			if firetimeLeft <= 0 then
 				ttfiretotemtime = 0
 				ttfirebuttontext:SetText('')
-				ttfireicon:SetTexture(nil)
+				ttfireicon:SetTexture('Interface\\Icons\\Spell_Totem_WardOfDraining')
 				ttfireborder:SetBackdropColor(0, 0, 0, 0.75)
 				ttfirebuttontext:SetTextColor(1.0, 1.0, 1.0)
-				ttfirebutton:Hide()
 			elseif firetimeLeft < 10 then
 				ttfirebuttontext:SetTextColor(1.0, 0.0, 0.0)
 			end
 	end
 end)
-
-
--- Create Windfury Totem Check
-
-local wfpmbutton = CreateFrame('Button', nil, UIParent)
-local wfpmtextgrp1 = wfpmbutton:CreateFontString(nil, 'OVERLAY', 'GameFontHighlightSmall')
-local wfpmtextgrp2 = wfpmbutton:CreateFontString(nil, 'OVERLAY', 'GameFontHighlightSmall')
-local wfpmtextgrp3 = wfpmbutton:CreateFontString(nil, 'OVERLAY', 'GameFontHighlightSmall')
-local wfpmtextgrp4 = wfpmbutton:CreateFontString(nil, 'OVERLAY', 'GameFontHighlightSmall')
-
-wfpmbutton.wfpmtextgrp1 = wfpmtextgrp1
-wfpmbutton.wfpmtextgrp2 = wfpmtextgrp2
-wfpmbutton.wfpmtextgrp3 = wfpmtextgrp3
-wfpmbutton.wfpmtextgrp4 = wfpmtextgrp4
-
-wfpmbutton:SetWidth(1)
-wfpmbutton:SetHeight(1)
-wfpmbutton:SetPoint('TOP', TTDraggingPosition, 'TOP')
-
-wfpmtextgrp1:SetPoint('CENTER', wfpmbutton, 'CENTER', 0, 10)
-wfpmtextgrp1:SetFont("Fonts\\FRIZQT__.TTF", 10)
-
-wfpmtextgrp2:SetPoint('CENTER', wfpmtextgrp1, 'CENTER', 0, 12)
-wfpmtextgrp2:SetFont("Fonts\\FRIZQT__.TTF", 10)
-
-wfpmtextgrp3:SetPoint('CENTER', wfpmtextgrp2, 'CENTER', 0, 12)
-wfpmtextgrp3:SetFont("Fonts\\FRIZQT__.TTF", 10)
-
-wfpmtextgrp4:SetPoint('CENTER', wfpmtextgrp3, 'CENTER', 0, 12)
-wfpmtextgrp4:SetFont("Fonts\\FRIZQT__.TTF", 10)
-
-local wfpartyTexts = { wfpmtextgrp1, wfpmtextgrp2, wfpmtextgrp3, wfpmtextgrp4 }
-
-function wfpmUpdate()
-		local i, name, text
-		for i = 1, 4 do
-			name = UnitName("party"..i)
-			text = wfpartyTexts[i]
-			if name then
-				if 	HasBuffName("Windfury Totem Effect", "party"..i) then
-					text:SetText("|cff00ff00" .. name .. "|r")
-				else
-					text:SetText("|cffff0000" .. name .. "|r")
-				end
-					text:Show()
-			else
-				text:Hide()
-			end
-		end
-end
-
-wfpmbutton:RegisterEvent('UNIT_AURA')
-wfpmbutton:RegisterEvent('PARTY_MEMBERS_CHANGED')
-wfpmbutton:RegisterEvent('PLAYER_LOGIN')
-
-
-wfpmbutton:SetScript('OnEvent', function()
-	if wftotemactivestatus == true then
-		wfpmUpdate()
-		wfpmbutton:Show()
-	else wfpmbutton:Hide()
-	end
-end)
-
 
 
 
