@@ -8,6 +8,9 @@ Using /mytotemscast will place those totems
 
 Using /tt lock/unlock will make TotemTimers movable or fixed
 
-Using /tt show/hode will make TotemTimers visible or hidden
+The Addon will show you, which group member benefits from Windfury and who doesnt
 
 If you are using nampower, you can place all totems with one button press.
+
+<img width="153" height="71" alt="image" src="https://github.com/user-attachments/assets/442ad945-446c-4216-9370-e13f2e711763" />
+
