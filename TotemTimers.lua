@@ -183,18 +183,21 @@ ttfirebutton:Hide()
 
 --------------------------------------------------------------------------------
 
+-- Tooltip Erstellung
+CreateFrame('GameTooltip', 'MyTotemsToolTip', nil, 'GameTooltipTemplate')
+
 -- Funktion für Bufftracking
 function HasBuffName(buffName, unit)
     if not buffName or not unit then
         return false;
     end
 
-    local text = getglobal(APDToolTip:GetName().."TextLeft1");
+    local text = getglobal(MyTotemsToolTip:GetName().."TextLeft1");
 	for i=1, 32 do
-		APDToolTip:SetOwner(UIParent, "ANCHOR_NONE");
-		APDToolTip:SetUnitBuff(unit, i);
+		MyTotemsToolTip:SetOwner(UIParent, "ANCHOR_NONE");
+		MyTotemsToolTip:SetUnitBuff(unit, i);
 		name = text:GetText();
-		APDToolTip:Hide();
+		MyTotemsToolTip:Hide();
         buffName = string.gsub(buffName, "_", " ");
 		if ( name and string.find(name, buffName) ) then
 			return true;
