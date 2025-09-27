@@ -183,6 +183,30 @@ ttfirebutton:Hide()
 
 --------------------------------------------------------------------------------
 
+-- Funktion für Bufftracking
+function HasBuffName(buffName, unit)
+    if not buffName or not unit then
+        return false;
+    end
+
+    local text = getglobal(APDToolTip:GetName().."TextLeft1");
+	for i=1, 32 do
+		APDToolTip:SetOwner(UIParent, "ANCHOR_NONE");
+		APDToolTip:SetUnitBuff(unit, i);
+		name = text:GetText();
+		APDToolTip:Hide();
+        buffName = string.gsub(buffName, "_", " ");
+		if ( name and string.find(name, buffName) ) then
+			return true;
+		end
+    end
+
+    return false;
+end
+
+--------------------------------------------------------------------------------
+
+
 wftotemactivestatus = false
 
 ttairbutton:RegisterEvent('CHAT_MSG_SPELL_SELF_BUFF')
